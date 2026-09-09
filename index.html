@@ -1617,19 +1617,16 @@
 			<div class="contact-card">
 				<h3>The control layer for hypertension treatment.</h3>
 				<p>For partnership inquiries, send a note and we'll follow up with you.</p>
-				<form id="contactForm" class="cform" novalidate>
-					<input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
-					<input type="hidden" name="subject" value="Geneticure website inquiry">
-					<input type="hidden" name="from_name" value="Geneticure Website">
-					<input type="checkbox" name="botcheck" class="cform-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+				<form id="contactForm" class="cform" novalidate netlify data-netlify-recaptcha="true">
 					<div class="cform-row">
 						<input name="name" required placeholder="Name" autocomplete="name">
 						<input name="email" type="email" required placeholder="Email" autocomplete="email">
 					</div>
 					<input name="organization" placeholder="Organization" autocomplete="organization">
 					<textarea name="message" rows="4" required placeholder="How can we help?"></textarea>
-					<!-- Optional stronger captcha: paste a Cloudflare Turnstile sitekey below and enable Turnstile in your Web3Forms dashboard -->
-					<!-- <div class="cf-turnstile" data-sitekey="YOUR-TURNSTILE-SITEKEY"></div> -->
+
+					<div data-netlify-recaptcha="true"></div>
+
 					<button type="submit" class="cform-btn">Send message</button>
 					<p class="cform-status" id="cformStatus" role="status" aria-live="polite"></p>
 				</form>
