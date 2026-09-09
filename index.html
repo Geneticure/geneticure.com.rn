@@ -1104,23 +1104,6 @@
 			margin-top: 18px;
 		}
 
-		.reveal {
-			opacity: 1;
-		}
-
-		@media (prefers-reduced-motion:no-preference) {
-			.reveal {
-				opacity: 0;
-				transform: translateY(16px);
-				transition: opacity .7s ease, transform .7s ease;
-			}
-
-			.reveal.in {
-				opacity: 1;
-				transform: none;
-			}
-		}
-
 		:focus-visible {
 			outline: 2px solid var(--blue-bright);
 			outline-offset: 3px;
@@ -1181,11 +1164,11 @@
 	<!-- THE GENETICURE SYSTEM -->
 	<section class="sec" id="platform">
 		<div class="wrap">
-			<div class="sec-head reveal">
+			<div class="sec-head">
 				<span class="eyebrow">The Geneticure system</span>
 				<h2 class="h2">We match treatment to biology,<br>from a single cheek swab.</h2>
 			</div>
-			<div class="flow reveal">
+			<div class="flow">
 				<div class="step card">
 					<div class="n">Step 1</div>
 					<h4>Cheek swab</h4>
@@ -1206,7 +1189,7 @@
 						patient is to respond; for medications, the drug or drugs most likely to work.</p>
 				</div>
 			</div>
-			<p class="sub reveal" style="margin-top:24px;">This is not pharmacogenomics. Geneticure is <b>Integrated
+			<p class="sub" style="margin-top:24px;">This is not pharmacogenomics. Geneticure is <b>Integrated
 					Computational Genomic Medicine</b>: an inch-wide, mile-deep genetic window to individual physiology.</p>
 		</div>
 	</section>
@@ -1214,7 +1197,7 @@
 	<!-- RDN BOTTLENECK -->
 	<section class="sec" id="rdn">
 		<div class="wrap">
-			<div class="sec-head reveal">
+			<div class="sec-head">
 				<span class="eyebrow">The renal denervation opportunity</span>
 				<div class="head-row">
 					<h2 class="h2">Renal denervation isn't weak.<br>Patient selection is.</h2>
@@ -1240,7 +1223,7 @@
 					and three see no benefit or get worse, and today there's no way to know who will respond.</p>
 			</div>
 
-			<div class="reveal" style="margin-top:34px;">
+			<div style="margin-top:34px;">
 				<div class="dots" aria-hidden="true">
 					<span class="dot good"></span><span class="dot good"></span><span class="dot good"></span><span
 						class="dot good"></span><span class="dot good"></span>
@@ -1251,13 +1234,13 @@
 					benefit, or worsen.</p>
 			</div>
 
-			<div class="card card-blue reveal" style="margin-top:34px;">
+			<div class="card card-blue" style="margin-top:34px;">
 				<span class="tag">The counterintuitive insight</span>
 				<p class="desc" style="font-size:clamp(17px,1.9vw,21px); color:var(--ink); margin-top:10px;">Being selective
 					about who you treat is the fastest path to treating the <i>most</i> patients.</p>
 			</div>
 
-			<div class="metrics m2 reveal" style="margin-top:34px;">
+			<div class="metrics m2" style="margin-top:34px;">
 				<div class="metric">
 					<div class="v dim">−3.9</div>
 					<div class="k">mmHg: RDN's current average result, not statistically different from placebo</div>
@@ -1275,7 +1258,7 @@
 					<div class="k">patient willingness once responders are selected</div>
 				</div>
 			</div>
-			<p class="src reveal">Patient-willingness figures from the Medtronic Patient Preferences for the Treatment of
+			<p class="src">Patient-willingness figures from the Medtronic Patient Preferences for the Treatment of
 				Hypertension study, presented at TCT 2021 (Kandzari DE et al., discrete choice experiment).</p>
 		</div>
 	</section>
@@ -1283,11 +1266,11 @@
 	<!-- RDN VALIDATION + MARKET UNLOCK -->
 	<section class="sec" id="validation" style="border-bottom:none;">
 		<div class="wrap">
-			<div class="sec-head reveal">
+			<div class="sec-head">
 				<span class="eyebrow">Clinical validation · blinded</span>
 				<h2 class="h2">In a blinded pilot,<br>we identified responders.</h2>
 			</div>
-			<div class="grid2 reveal">
+			<div class="grid2">
 				<div class="card"><span class="tag">Scored as non-responders</span>
 					<div class="metric" style="padding:16px 0 0; background:transparent;">
 						<div class="v dim">+4.8</div>
@@ -1301,7 +1284,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="metrics m4 reveal" style="margin-top:22px;">
+			<div class="metrics m4" style="margin-top:22px;">
 				<div class="metric">
 					<div class="v">96%</div>
 					<div class="k">sensitivity</div>
@@ -1319,10 +1302,10 @@
 					<div class="k">mmHg gap, high vs. low score</div>
 				</div>
 			</div>
-			<p class="src reveal">N=29 blinded study. Patients recruited at Stanford, Baylor, Penn, Ascension; Geneticure
+			<p class="src">N=29 blinded study. Patients recruited at Stanford, Baylor, Penn, Ascension; Geneticure
 				blinded to responder status.</p>
 
-			<div class="sec-head reveal" style="margin-top:60px;">
+			<div class="sec-head" style="margin-top:60px;">
 				<span class="eyebrow">Market unlock</span>
 				<h2 class="h2" style="font-size:clamp(24px,3vw,36px);">Being selective treats more patients, not fewer.</h2>
 				<p class="sub">Better outcomes drive willingness, physician confidence, and payer coverage. So screening out
@@ -1331,7 +1314,7 @@
 		</div>
 	</section>
 
-	<div class="path-divider reveal" aria-hidden="true">
+	<div class="path-divider" aria-hidden="true">
 		<div class="wrap">
 			<div class="pd-line-strong"></div>
 		</div>
@@ -1340,7 +1323,7 @@
 	<!-- MEDICATION (second engine) -->
 	<section class="sec" id="medication">
 		<div class="wrap">
-			<div class="sec-head reveal">
+			<div class="sec-head">
 				<span class="eyebrow">Pathway 2 · medication response</span>
 				<div class="head-row">
 					<h2 class="h2">Right drug, first time,<br>across 40+ hypertension medications.</h2>
@@ -1355,7 +1338,7 @@
 				<p class="sub"><b>If validated at scale, this becomes the default starting point for hypertension treatment.</b>
 					The same swab, the same platform: a second engine addressing 120M U.S. patients.</p>
 			</div>
-			<div class="grid2 reveal">
+			<div class="grid2">
 				<div class="card">
 					<span class="tag">Clinical results vs. standard of care</span>
 					<div class="mini-row" style="gap:34px; margin-top:22px;">
@@ -1401,11 +1384,11 @@
 	<!-- TEAM -->
 	<section class="sec" id="team">
 		<div class="wrap">
-			<div class="sec-head reveal">
+			<div class="sec-head">
 				<span class="eyebrow">Team</span>
 				<h2 class="h2">A decade pioneering genomic technology<br>to treat hypertension better.</h2>
 			</div>
-			<div class="team reveal">
+			<div class="team">
 				<div class="person">
 					<div class="role">CEO</div>
 					<div class="nm">Scott Snyder</div>
@@ -1440,12 +1423,12 @@
 						strategy.</div>
 				</div>
 			</div>
-			<p class="backers reveal"><b>Advisors</b>: Bruce D. Johnson, PhD (Professor of Medicine &amp; Physiology, Mayo
+			<p class="backers"><b>Advisors</b>: Bruce D. Johnson, PhD (Professor of Medicine &amp; Physiology, Mayo
 				Clinic; NIH-funded genetics &amp; cardiorespiratory lab) · Brad Wilson (CEO Emeritus, BCBS-NC) · Scott J. Dylla,
 				PhD (former Co-Founder &amp; CSO of Stemcentrx, acq'd by ABBV in 2016) · Joseph Falsone, MD, FACC (cardiologist,
 				North Carolina Heart &amp; Vascular) · Jordan Lipton, MD (co-founder, Signature Healthcare; emergency &amp;
 				concierge medicine).</p>
-			<p class="backers reveal"><b>Investors include</b>: Mayo Clinic, Stanford University, Fairview Health, M25,
+			<p class="backers"><b>Investors include</b>: Mayo Clinic, Stanford University, Fairview Health, M25,
 				Wireframe Ventures, Xcellerant Ventures, Western Skies Partners.</p>
 		</div>
 	</section>
@@ -1453,14 +1436,14 @@
 	<!-- EVIDENCE -->
 	<section class="sec" id="evidence">
 		<div class="wrap">
-			<div class="sec-head reveal">
+			<div class="sec-head">
 				<span class="eyebrow">Evidence</span>
 				<h2 class="h2">A decade of peer-reviewed research.</h2>
 				<p class="sub">Geneticure goes well beyond drug metabolism, assessing hypertension treatment across the heart,
 					blood vessels, and kidneys. The full evidence base is below.</p>
 			</div>
 
-			<div class="seen reveal">
+			<div class="seen">
 				<span class="seen-label">As seen in</span>
 				<div class="seen-logos">
 					<a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(22)01471-4/fulltext" target="_blank"
@@ -1476,7 +1459,7 @@
 				</div>
 			</div>
 
-			<details class="evi reveal">
+			<details class="evi">
 				<summary>View the full evidence base</summary>
 				<div class="evi-body">
 
@@ -1608,11 +1591,11 @@
 	<!-- CONTACT / CLOSING -->
 	<section class="sec" id="contact" style="border-bottom:none;">
 		<div class="wrap">
-			<div class="sec-head reveal">
+			<div class="sec-head">
 				<span class="eyebrow">The quadruple aim</span>
 				<h2 class="h2">Next-generation precision medicine for the<br>leading preventable cause of death.</h2>
 			</div>
-			<div class="quad reveal">
+			<div class="quad">
 				<div class="card">
 					<div class="qh">Better outcomes</div>
 					<div class="qp">Right patient for RDN. Right drug first.</div>
@@ -1631,7 +1614,7 @@
 				</div>
 			</div>
 
-			<div class="contact-card reveal">
+			<div class="contact-card">
 				<h3>The control layer for hypertension treatment.</h3>
 				<p>For partnership inquiries, send a note and we'll follow up with you.</p>
 				<form id="contactForm" class="cform" novalidate>
@@ -1677,40 +1660,6 @@
 				b.setAttribute('aria-expanded', open ? 'true' : 'false');
 			});
 			m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); }); });
-		})();
-		(function () {
-			if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-			var p = document.getElementById('pulse'); if (!p) return;
-			var len = p.getTotalLength();
-			p.style.strokeDasharray = len; p.style.strokeDashoffset = len;
-			p.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], { duration: 2200, easing: 'ease', fill: 'forwards' });
-		})();
-		(function () {
-			var els = document.querySelectorAll('.reveal');
-			if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
-				els.forEach(function (e) { e.classList.add('in'); }); return;
-			}
-			var io = new IntersectionObserver(function (es) {
-				es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-			}, { threshold: .12 });
-			els.forEach(function (e) { io.observe(e); });
-		})();
-		(function () {
-			var items = [].slice.call(document.querySelectorAll('.menu a[href^="#"]:not(.cta)'))
-				.map(function (a) { var el = document.getElementById(a.getAttribute('href').slice(1)); return el ? { a: a, el: el } : null; })
-				.filter(Boolean);
-			if (!items.length) return;
-			function onScroll() {
-				var y = window.scrollY + 130;
-				var active = null;
-				items.forEach(function (it) { if (it.el.offsetTop <= y) active = it; });
-				if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 4) active = items[items.length - 1];
-				items.forEach(function (it) { it.a.classList.toggle('active', it === active); });
-			}
-			var ticking = false;
-			window.addEventListener('scroll', function () { if (!ticking) { requestAnimationFrame(function () { onScroll(); ticking = false; }); ticking = true; } }, { passive: true });
-			window.addEventListener('resize', onScroll);
-			onScroll();
 		})();
 		(function () {
 			var f = document.getElementById('contactForm'); if (!f) return;
