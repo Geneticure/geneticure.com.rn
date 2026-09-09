@@ -1617,7 +1617,7 @@
 			<div class="contact-card">
 				<h3>The control layer for hypertension treatment.</h3>
 				<p>For partnership inquiries, send a note and we'll follow up with you.</p>
-				<form id="contactForm" class="cform" novalidate netlify data-netlify-recaptcha="true">
+				<form name="Contact" id="contactForm" class="cform" data-netlify="true">
 					<div class="cform-row">
 						<input name="name" required placeholder="Name" autocomplete="name">
 						<input name="email" type="email" required placeholder="Email" autocomplete="email">
@@ -1664,12 +1664,18 @@
 			var btn = f.querySelector('.cform-btn');
 			f.addEventListener('submit', function (e) {
 				e.preventDefault();
-				var key = f.querySelector('[name="access_key"]').value;
-				if (key.indexOf('YOUR-') === 0) { s.textContent = 'Contact form is not configured yet.'; s.className = 'cform-status err'; return; }
 				s.textContent = 'Sending…'; s.className = 'cform-status'; btn.disabled = true;
-				fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(f) })
+
+				fetch('/', {
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded',
+					},
+					method: 'POST',
+					body: new URLSearchParams(new FormData(f)).toString(),
+				})
 					.then(function (r) { return r.json(); })
 					.then(function (j) {
+						debugger;
 						if (j.success) { s.textContent = 'Thanks. Your message has been sent.'; s.className = 'cform-status ok'; f.reset(); }
 						else { s.textContent = 'Something went wrong. Please try again.'; s.className = 'cform-status err'; }
 					})
