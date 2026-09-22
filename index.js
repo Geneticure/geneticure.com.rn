@@ -22,7 +22,7 @@
 			]
 		},
 		screened: {
-			bracket: 70,			// willingness applies to the 24.5M screened in
+			bracket: 100,			// willingness applies to all 35M eligible
 			segments: [
 				{ fill: 'responding', width: 54, label: '18.9M treated and responding' },
 				{ fill: 'declined', width: 16, label: '5.6M' },
