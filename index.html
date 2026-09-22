@@ -300,34 +300,32 @@
 				</div>
 
 				<div class="bars">
-					<span class="bars-label">Of 35M eligible patients</span>
-
-					<div class="bar-row">
-						<div class="bar-head">
-							<span class="bar-name">Without a selection test</span>
-							<span class="bar-fig">8.4M treated · 5.9M benefit</span>
-						</div>
-						<div class="bar-track">
-							<span class="bar-seg seg-treated" data-bar="baseline-treated"></span>
-							<span class="bar-seg seg-benefit" data-bar="baseline-benefit"></span>
-						</div>
+					<div class="bars-scale">
+						<span>0</span>
+						<span>35M eligible patients</span>
 					</div>
 
 					<div class="bar-row">
-						<div class="bar-head">
-							<span class="bar-name">With Geneticure</span>
-							<span class="bar-fig">18.9M treated · 18.9M benefit</span>
-						</div>
-						<div class="bar-track">
-							<span class="bar-seg seg-screened" data-bar="selected-screened"></span>
-							<span class="bar-seg seg-benefit" data-bar="selected-benefit"></span>
-						</div>
+						<span class="bar-name">Without patient screening</span>
+						<div class="bar-track" data-track="unscreened" role="img"></div>
+						<div class="bar-bracket" data-bracket="unscreened" aria-hidden="true"></div>
+						<p class="bar-caption">Of all 35M eligible, <b>24%</b> are willing to undergo RDN at ~5 mmHg
+							expected reduction, giving 8.4M treated</p>
+					</div>
+
+					<div class="bar-row">
+						<span class="bar-name">With Geneticure screening</span>
+						<div class="bar-track" data-track="screened" role="img"></div>
+						<div class="bar-bracket" data-bracket="screened" aria-hidden="true"></div>
+						<p class="bar-caption">24.5M screened in, of whom <b>77%</b> are willing to undergo RDN at
+							10+ mmHg expected reduction, giving 18.9M treated</p>
 					</div>
 
 					<div class="bar-legend">
-						<span class="lg"><i class="sw sw-benefit"></i>Treated and responding</span>
-						<span class="lg"><i class="sw sw-treated"></i>Treated, no benefit</span>
-						<span class="lg"><i class="sw sw-screened"></i>Screened in (24.5M)</span>
+						<span class="lg"><i class="sw sw-responding"></i>Treated and responding</span>
+						<span class="lg"><i class="sw sw-noresponse"></i>Treated, no response</span>
+						<span class="lg"><i class="sw sw-declined"></i>Screened in, declined the procedure</span>
+						<span class="lg"><i class="sw sw-untreated"></i>Not treated</span>
 					</div>
 				</div>
 
