@@ -7,19 +7,70 @@
 	m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); }); });
 })();
 
-/* Comparison-bar widths, as a percentage of the 35M eligible-patient track.
-   Revise these figures here; the markup carries no widths. */
+/* The 35M eligible-patient chart. Each bar is the full 35M; its segments are
+   widths as a percentage of that track and must sum to 100. Bracket widths are
+   the share of the 35M the willingness figure below the bar is drawn from.
+   Revise the figures here; the markup and the stylesheet carry none. */
 (function () {
-	var BAR_WIDTHS = {
-		'baseline-treated': 24,		// 8.4M treated without a selection test
-		'baseline-benefit': 16.8,	// 5.9M of those who benefit
-		'selected-screened': 70,	// 24.5M screened in as likely responders
-		'selected-benefit': 54		// 18.9M treated, and benefiting
+	var CHART = {
+		unscreened: {
+			bracket: 100,			// willingness applies to all 35M eligible
+			segments: [
+				{ fill: 'responding', width: 16.86, label: '5.9M' },
+				{ fill: 'noresponse', width: 7.14, label: '2.5M' },
+				{ fill: 'untreated', width: 76, label: '26.6M never treated' }
+			]
+		},
+		screened: {
+			bracket: 70,			// willingness applies to the 24.5M screened in
+			segments: [
+				{ fill: 'responding', width: 54, label: '18.9M treated and responding' },
+				{ fill: 'declined', width: 16, label: '5.6M' },
+				{ fill: 'untreated', width: 30, label: '10.5M screened out' }
+			]
+		}
 	};
-	document.querySelectorAll('[data-bar]').forEach(function (el) {
-		var w = BAR_WIDTHS[el.getAttribute('data-bar')];
-		if (w != null) el.style.width = w + '%';
+
+	var labels = [];
+	Object.keys(CHART).forEach(function (key) {
+		var track = document.querySelector('[data-track="' + key + '"]');
+		if (!track) return;
+		var read = [];
+		CHART[key].segments.forEach(function (s) {
+			var seg = document.createElement('span');
+			seg.className = 'bar-seg seg-' + s.fill;
+			seg.style.width = s.width + '%';
+			var label = document.createElement('span');
+			label.className = 'seg-label';
+			label.textContent = s.label;
+			seg.appendChild(label);
+			track.appendChild(seg);
+			labels.push(label);
+			read.push(s.label);
+		});
+		track.setAttribute('aria-label', 'Of 35M eligible patients: ' + read.join(', ') + '.');
+
+		var bracket = document.querySelector('[data-bracket="' + key + '"]');
+		if (bracket) bracket.style.width = CHART[key].bracket + '%';
 	});
+	if (!labels.length) return;
+
+	/* Drop any inline label the segment is too narrow to hold, rather than let
+	   it overflow. The legend and the caption below the bar carry the meaning. */
+	function fitLabels() {
+		labels.forEach(function (l) { l.classList.remove('hide'); });
+		labels.forEach(function (l) {
+			if (l.offsetWidth + 12 > l.parentNode.clientWidth) l.classList.add('hide');
+		});
+	}
+	fitLabels();
+	if (window.ResizeObserver) {
+		var ro = new ResizeObserver(fitLabels);
+		document.querySelectorAll('[data-track]').forEach(function (t) { ro.observe(t); });
+	} else {
+		window.addEventListener('resize', fitLabels);
+	}
+	if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitLabels);
 })();
 
 (function () {
