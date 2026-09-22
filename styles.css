@@ -1208,7 +1208,7 @@ details.evi summary:hover {
 
 .bars-scale {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	gap: 16px;
 	font-family: var(--mono);
 	font-size: 11px;
