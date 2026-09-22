@@ -1202,7 +1202,8 @@ details.evi summary:hover {
 	--seg-dark: #181c22;
 	--seg-dark-ink: #7c848e;
 	--seg-blue-ink: #05182b;
-	--seg-hatch: repeating-linear-gradient(135deg, #58616e 0 4px, #3c434e 4px 8px);
+	--seg-hatch: repeating-linear-gradient(135deg, #454d59 0 4px, #2f353e 4px 8px);
+	--seg-hatch-ink: #e3e7ec;
 	margin-top: 44px;
 }
 
@@ -1275,19 +1276,19 @@ details.evi summary:hover {
 	color: var(--seg-navy-ink);
 }
 
-.seg-declined {
+.seg-screenedout {
 	background: var(--seg-hatch);
 }
 
-.seg-declined .seg-label {
-	color: var(--white);
+.seg-screenedout .seg-label {
+	color: var(--seg-hatch-ink);
 }
 
-.seg-untreated {
+.seg-uninterested {
 	background: var(--seg-dark);
 }
 
-.seg-untreated .seg-label {
+.seg-uninterested .seg-label {
 	color: var(--seg-dark-ink);
 }
 
@@ -1340,11 +1341,11 @@ details.evi summary:hover {
 	background: var(--seg-navy);
 }
 
-.sw-declined {
+.sw-screenedout {
 	background: var(--seg-hatch);
 }
 
-.sw-untreated {
+.sw-uninterested {
 	background: var(--seg-dark);
 	border: 1px solid var(--line);
 }
