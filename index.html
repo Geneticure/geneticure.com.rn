@@ -519,11 +519,23 @@
 				<p>For partnership inquiries, send a note and we'll follow up with you.</p>
 				<form name="Contact" id="contactForm" class="cform" data-netlify="true">
 					<div class="cform-row">
-						<input name="name" required placeholder="Name" autocomplete="name">
-						<input name="email" type="email" required placeholder="Email" autocomplete="email">
+						<div class="cform-field">
+							<label for="cf-name">Name</label>
+							<input id="cf-name" name="name" required autocomplete="name">
+						</div>
+						<div class="cform-field">
+							<label for="cf-email">Email</label>
+							<input id="cf-email" name="email" type="email" required autocomplete="email">
+						</div>
 					</div>
-					<input name="organization" placeholder="Organization" autocomplete="organization">
-					<textarea name="message" rows="4" required placeholder="How can we help?"></textarea>
+					<div class="cform-field">
+						<label for="cf-organization">Organization (optional)</label>
+						<input id="cf-organization" name="organization" autocomplete="organization">
+					</div>
+					<div class="cform-field">
+						<label for="cf-message">Message</label>
+						<textarea id="cf-message" name="message" rows="4" required placeholder="How can we help?"></textarea>
+					</div>
 
 					<!-- <div data-netlify-recaptcha="true"></div> -->
 
@@ -538,7 +550,7 @@
 		<div class="wrap">
 			<div class="foot-row">
 				<span class="brand">Geneticure<span class="pt">.</span></span>
-				<span class="mono">geneticure.com · 1.800.DNA.8109 · Based in Tucson, AZ · Rochester, MN · © 2026 Geneticure,
+				<span class="mono"><a class="foot-link" href="https://geneticure.com">geneticure.com</a> · <a class="foot-link" href="tel:+18003628109">1.800.DNA.8109</a> · Based in Tucson, AZ · Rochester, MN · © 2026 Geneticure,
 					Inc.</span>
 			</div>
 			<p class="confidential">This page describes a research and product-development program and the company's clinical
