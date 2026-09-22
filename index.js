@@ -8,25 +8,26 @@
 })();
 
 /* The 35M eligible-patient chart. Each bar is the full 35M; its segments are
-   widths as a percentage of that track and must sum to 100. Bracket widths are
-   the share of the 35M the willingness figure below the bar is drawn from.
+   widths as a percentage of that track and must sum to 100. Patient interest is
+   the first gate on both rows, so the bracket is the interested share of the
+   35M, drawn from the left edge.
    Revise the figures here; the markup and the stylesheet carry none. */
 (function () {
 	var CHART = {
 		unscreened: {
-			bracket: 100,			// willingness applies to all 35M eligible
+			bracket: 24,			// the 8.4M interested at ~5 mmHg
 			segments: [
 				{ fill: 'responding', width: 16.86, label: '5.9M' },
 				{ fill: 'noresponse', width: 7.14, label: '2.5M' },
-				{ fill: 'untreated', width: 76, label: '26.6M never treated' }
+				{ fill: 'uninterested', width: 76, label: '26.6M not interested' }
 			]
 		},
 		screened: {
-			bracket: 70,			// willingness applies to the 24.5M who screen in
+			bracket: 77,			// the 27M interested at 10+ mmHg
 			segments: [
 				{ fill: 'responding', width: 54, label: '18.9M treated and responding' },
-				{ fill: 'declined', width: 16, label: '5.6M declined', short: '5.6M' },
-				{ fill: 'untreated', width: 30, label: '10.5M screened out' }
+				{ fill: 'screenedout', width: 23.1, label: '8.1M screened out', short: '8.1M' },
+				{ fill: 'uninterested', width: 22.9, label: '8.0M not interested', short: '8.0M' }
 			]
 		}
 	};
