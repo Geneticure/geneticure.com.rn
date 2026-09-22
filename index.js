@@ -22,10 +22,10 @@
 			]
 		},
 		screened: {
-			bracket: 100,			// willingness applies to all 35M eligible
+			bracket: 70,			// willingness applies to the 24.5M who screen in
 			segments: [
 				{ fill: 'responding', width: 54, label: '18.9M treated and responding' },
-				{ fill: 'declined', width: 16, label: '5.6M' },
+				{ fill: 'declined', width: 16, label: '5.6M declined', short: '5.6M' },
 				{ fill: 'untreated', width: 30, label: '10.5M screened out' }
 			]
 		}
@@ -45,7 +45,7 @@
 			label.textContent = s.label;
 			seg.appendChild(label);
 			track.appendChild(seg);
-			labels.push(label);
+			labels.push({ el: label, full: s.label, short: s.short || s.label });
 			read.push(s.label);
 		});
 		track.setAttribute('aria-label', 'Of 35M eligible patients: ' + read.join(', ') + '.');
@@ -55,12 +55,18 @@
 	});
 	if (!labels.length) return;
 
-	/* Drop any inline label the segment is too narrow to hold, rather than let
-	   it overflow. The legend and the caption below the bar carry the meaning. */
+	/* Fall back to the shorter label, then drop it altogether, when the segment
+	   is too narrow to hold it, rather than let it overflow. The legend and the
+	   caption below the bar carry the meaning. */
+	function fits(l) {
+		return l.el.offsetWidth + 12 <= l.el.parentNode.clientWidth;
+	}
 	function fitLabels() {
-		labels.forEach(function (l) { l.classList.remove('hide'); });
+		labels.forEach(function (l) { l.el.classList.remove('hide'); l.el.textContent = l.full; });
 		labels.forEach(function (l) {
-			if (l.offsetWidth + 12 > l.parentNode.clientWidth) l.classList.add('hide');
+			if (fits(l)) return;
+			l.el.textContent = l.short;
+			if (!fits(l)) l.el.classList.add('hide');
 		});
 	}
 	fitLabels();
