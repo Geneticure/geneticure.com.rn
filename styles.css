@@ -570,6 +570,48 @@ header.top {
 	margin-top: 8px;
 }
 
+.glance {
+	margin-top: 14px;
+}
+
+.glance-row {
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	gap: 6px 22px;
+	padding: 13px 0;
+	border-top: 1px solid var(--line);
+}
+
+.glance-row:first-of-type {
+	border-top: none;
+	padding-top: 4px;
+}
+
+.glance dt {
+	font-family: var(--mono);
+	font-size: 11px;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	color: var(--blue-bright);
+	padding-top: 3px;
+}
+
+.glance dd {
+	font-size: 14.5px;
+	line-height: 1.55;
+	color: var(--muted-bright);
+}
+
+@media (max-width:820px) {
+	.glance-row {
+		grid-template-columns: 1fr;
+	}
+
+	.glance dt {
+		padding-top: 0;
+	}
+}
+
 .flow {
 	display: grid;
 	grid-template-columns: 1fr auto 1fr auto 1fr;
