@@ -544,12 +544,6 @@ header.top {
 	margin: 8px 0 8px;
 }
 
-.card .desc {
-	color: var(--muted);
-	font-size: 15px;
-	line-height: 1.55;
-}
-
 .mini-row {
 	display: flex;
 	gap: 28px;
