@@ -1111,9 +1111,11 @@ details.evi summary:hover {
 .willing-label {
 	font-family: var(--mono);
 	font-size: 11px;
+	line-height: 1.6;
 	letter-spacing: .16em;
 	text-transform: uppercase;
 	color: var(--muted);
+	max-width: 100%;
 }
 
 .willing-shift {
