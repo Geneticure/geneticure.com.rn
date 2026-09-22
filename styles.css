@@ -1000,6 +1000,14 @@ details.evi summary:hover {
 	font-weight: 600;
 }
 
+.evi-body .evi-tag {
+	font-family: var(--mono);
+	font-size: 11px;
+	letter-spacing: .04em;
+	color: var(--muted-2);
+	white-space: nowrap;
+}
+
 .evi-body a {
 	color: var(--blue-bright);
 	text-decoration: none;
