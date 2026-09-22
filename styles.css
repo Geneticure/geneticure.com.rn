@@ -641,6 +641,14 @@ header.top {
 	}
 }
 
+.step-icon {
+	display: block;
+	width: 36px;
+	height: 36px;
+	margin-bottom: 14px;
+	color: var(--blue-bright);
+}
+
 .step .n {
 	font-family: var(--mono);
 	font-size: 12px;
