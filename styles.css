@@ -565,35 +565,44 @@ header.top {
 	margin-top: 8px;
 }
 
+.card-glance {
+	padding: 15px 16px;
+	border-radius: 10px;
+}
+
+.card-glance .tag {
+	font-size: 9.5px;
+}
+
 .glance {
-	margin-top: 14px;
+	margin-top: 7px;
 }
 
 .glance-row {
 	display: grid;
-	grid-template-columns: 150px 1fr;
-	gap: 6px 22px;
-	padding: 13px 0;
+	grid-template-columns: 104px 1fr;
+	gap: 2px 14px;
+	padding: 7px 0;
 	border-top: 1px solid var(--line);
 }
 
 .glance-row:first-of-type {
 	border-top: none;
-	padding-top: 4px;
+	padding-top: 2px;
 }
 
 .glance dt {
 	font-family: var(--mono);
-	font-size: 11px;
-	letter-spacing: .12em;
+	font-size: 9.5px;
+	letter-spacing: .1em;
 	text-transform: uppercase;
 	color: var(--blue-bright);
-	padding-top: 3px;
+	padding-top: 2px;
 }
 
 .glance dd {
-	font-size: 14.5px;
-	line-height: 1.55;
+	font-size: 12px;
+	line-height: 1.5;
 	color: var(--muted-bright);
 }
 
