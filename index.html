@@ -185,21 +185,11 @@
 					<div class="v">−12.4</div>
 					<div class="k">mmHg. The sham-adjusted reduction in our highest-scoring pilot group.</div>
 				</div>
-				<div class="metric">
-					<div class="v dim">24%</div>
-					<div class="k">patient willingness at today's average reduction (~5 mmHg).</div>
-				</div>
-				<div class="metric">
-					<div class="v">77%</div>
-					<div class="k">patient willingness when the expected reduction is 10+ mmHg.</div>
-				</div>
 			</div>
-			<p class="src">Patient-willingness figures from the Medtronic Patient Preferences for the Treatment of
-				Hypertension study, presented at TCT 2021 (Kandzari DE et al., discrete choice experiment).</p>
 		</div>
 	</section>
 
-	<!-- RDN VALIDATION + MARKET UNLOCK -->
+	<!-- RDN VALIDATION + THE COUNTERINTUITIVE MATH -->
 	<section class="sec" id="validation" style="border-bottom:none;">
 		<div class="wrap">
 			<div class="sec-head">
@@ -275,17 +265,77 @@
 				</dl>
 			</div>
 
-			<div class="sec-head" style="margin-top:60px;">
-				<span class="eyebrow">Market unlock</span>
-				<h2 class="h2" style="font-size:clamp(24px,3vw,36px);">Being selective treats more patients, not fewer.</h2>
-				<p class="sub">Selection could expand net treated volume roughly 2.25× and the patients who benefit roughly
-					3.2×.</p>
-				<p class="src">Illustrative adoption scenario, not observed utilization. Starting from 35M eligible patients:
-					without a selection test, 24% willingness yields about 8.4M treated and about 5.9M who benefit (roughly
-					30% of RDN patients are non-responders). With Geneticure, about 70% screen in as likely responders
-					(24.5M), and 77% willingness at the higher expected benefit yields about 18.9M treated, nearly all of whom
-					respond. Net: about 2.25× more patients treated and about 3.2× more who benefit. Willingness figures from
-					a published patient-preference survey (2021).</p>
+			<div class="math" id="math">
+				<div class="sec-head">
+					<span class="eyebrow">The counterintuitive math</span>
+					<h2 class="h2" style="font-size:clamp(24px,3vw,36px);">Selection treats more patients, not fewer.</h2>
+					<p class="sub">Ruling out non-responders raises the expected benefit. Higher expected benefit brings more
+						patients forward.</p>
+				</div>
+
+				<div class="willing">
+					<span class="willing-label">Patient willingness</span>
+					<div class="willing-shift">
+						<span class="willing-stat">
+							<span class="wv dim">24%</span>
+							<span class="wc">at ~5 mmHg</span>
+						</span>
+						<span class="willing-arrow" aria-hidden="true">→</span>
+						<span class="willing-stat">
+							<span class="wv">77%</span>
+							<span class="wc">at 10+ mmHg</span>
+						</span>
+					</div>
+				</div>
+
+				<div class="mult">
+					<div class="mult-col">
+						<div class="mv">2.25×</div>
+						<div class="mk">more patients treated</div>
+					</div>
+					<div class="mult-col">
+						<div class="mv w">3.2×</div>
+						<div class="mk">more patients who benefit</div>
+					</div>
+				</div>
+
+				<div class="bars">
+					<span class="bars-label">Of 35M eligible patients</span>
+
+					<div class="bar-row">
+						<div class="bar-head">
+							<span class="bar-name">Without a selection test</span>
+							<span class="bar-fig">8.4M treated · 5.9M benefit</span>
+						</div>
+						<div class="bar-track">
+							<span class="bar-seg seg-treated" data-bar="baseline-treated"></span>
+							<span class="bar-seg seg-benefit" data-bar="baseline-benefit"></span>
+						</div>
+					</div>
+
+					<div class="bar-row">
+						<div class="bar-head">
+							<span class="bar-name">With Geneticure</span>
+							<span class="bar-fig">18.9M treated · 18.9M benefit</span>
+						</div>
+						<div class="bar-track">
+							<span class="bar-seg seg-screened" data-bar="selected-screened"></span>
+							<span class="bar-seg seg-benefit" data-bar="selected-benefit"></span>
+						</div>
+					</div>
+
+					<div class="bar-legend">
+						<span class="lg"><i class="sw sw-benefit"></i>Treated and benefit</span>
+						<span class="lg"><i class="sw sw-treated"></i>Treated, no benefit</span>
+						<span class="lg"><i class="sw sw-screened"></i>Screened in (24.5M)</span>
+					</div>
+				</div>
+
+				<p class="footnote">* Illustrative adoption scenario, not observed utilization. Assumes ~30% RDN non-response
+					without selection, 70% of patients screening in as likely responders, and near-complete response among
+					those selected. Willingness to undergo RDN (24% at ~5 mmHg expected reduction, 77% at 10+ mmHg) from a
+					published patient-preference survey (2021): Medtronic Patient Preferences for the Treatment of
+					Hypertension, presented at TCT 2021 (Kandzari DE et al., discrete choice experiment).</p>
 			</div>
 		</div>
 	</section>

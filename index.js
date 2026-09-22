@@ -7,6 +7,21 @@
 	m.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { m.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); }); });
 })();
 
+/* Comparison-bar widths, as a percentage of the 35M eligible-patient track.
+   Revise these figures here; the markup carries no widths. */
+(function () {
+	var BAR_WIDTHS = {
+		'baseline-treated': 24,		// 8.4M treated without a selection test
+		'baseline-benefit': 16.8,	// 5.9M of those who benefit
+		'selected-screened': 70,	// 24.5M screened in as likely responders
+		'selected-benefit': 54		// 18.9M treated, and benefiting
+	};
+	document.querySelectorAll('[data-bar]').forEach(function (el) {
+		var w = BAR_WIDTHS[el.getAttribute('data-bar')];
+		if (w != null) el.style.width = w + '%';
+	});
+})();
+
 (function () {
 	var f = document.getElementById('contactForm'); if (!f) return;
 	var s = document.getElementById('cformStatus');
