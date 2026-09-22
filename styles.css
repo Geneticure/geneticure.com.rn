@@ -1303,7 +1303,6 @@ details.evi summary:hover {
 	font-size: 12px;
 	line-height: 1.55;
 	color: var(--muted);
-	max-width: 86ch;
 }
 
 .bar-caption b {
