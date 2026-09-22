@@ -8,6 +8,7 @@
 	--ink: #eaf1f9;
 	--muted: #8499ac;
 	--muted-2: #5a6b7d;
+	--muted-bright: #a9bccd;
 	--blue: #1d8fd4;
 	--blue-bright: #4db4f5;
 	--blue-dim: rgba(29, 143, 212, .12);
@@ -99,9 +100,9 @@ section {
 
 .src {
 	font-family: var(--mono);
-	font-size: 11px;
+	font-size: 13px;
 	letter-spacing: .04em;
-	color: var(--muted-2);
+	color: var(--muted);
 	margin-top: 26px;
 	line-height: 1.6;
 	max-width: 92ch;
@@ -798,6 +799,21 @@ header.top {
 	opacity: 0;
 }
 
+.cform-field {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+	margin-bottom: 14px;
+}
+
+.cform-field label {
+	font-family: var(--mono);
+	font-size: 12.5px;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	color: var(--muted-bright);
+}
+
 .cform input,
 .cform textarea {
 	width: 100%;
@@ -808,7 +824,6 @@ header.top {
 	color: var(--ink);
 	font-family: var(--body);
 	font-size: 15px;
-	margin-bottom: 12px;
 	transition: border-color .2s ease;
 }
 
@@ -831,7 +846,12 @@ header.top {
 .cform-row {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 12px;
+	gap: 14px;
+	margin-bottom: 14px;
+}
+
+.cform-row .cform-field {
+	margin-bottom: 0;
 }
 
 @media (max-width:520px) {
@@ -896,10 +916,10 @@ header.top {
 
 .seen-label {
 	font-family: var(--mono);
-	font-size: 11px;
+	font-size: 12.5px;
 	letter-spacing: .16em;
 	text-transform: uppercase;
-	color: var(--muted-2);
+	color: var(--muted);
 }
 
 .seen-logos {
@@ -970,7 +990,7 @@ details.evi summary:hover {
 
 .evi-body h4 {
 	font-family: var(--mono);
-	font-size: 11px;
+	font-size: 13px;
 	letter-spacing: .14em;
 	text-transform: uppercase;
 	color: var(--blue-bright);
@@ -984,10 +1004,10 @@ details.evi summary:hover {
 }
 
 .evi-body li {
-	font-size: 12.5px;
-	line-height: 1.5;
-	color: var(--muted);
-	padding: 9px 0;
+	font-size: 14.5px;
+	line-height: 1.55;
+	color: var(--muted-bright);
+	padding: 10px 0;
 	border-top: 1px solid var(--line);
 }
 
@@ -1076,14 +1096,27 @@ footer {
 
 .foot-row .mono {
 	font-family: var(--mono);
-	font-size: 12px;
+	font-size: 13px;
 	letter-spacing: .06em;
-	color: var(--muted-2);
+	color: var(--muted);
+}
+
+.foot-link {
+	color: var(--muted-bright);
+	text-decoration: underline;
+	text-decoration-color: var(--line-2);
+	text-underline-offset: 3px;
+	transition: color .2s ease, text-decoration-color .2s ease;
+}
+
+.foot-link:hover {
+	color: var(--blue-bright);
+	text-decoration-color: var(--blue-bright);
 }
 
 .confidential {
-	color: var(--muted-2);
-	font-size: 12px;
+	color: var(--muted);
+	font-size: 13px;
 	line-height: 1.6;
 	max-width: 74ch;
 	margin-top: 18px;
